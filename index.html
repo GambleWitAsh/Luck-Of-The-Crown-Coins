@@ -10,19 +10,26 @@
             align-items: center;
             background-color: #ffe6f0;
             font-family: Arial, sans-serif;
+            background-image: url('https://i.imgur.com/TiBGQ5D.jpg'); /* Game show background */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px #000;
         }
         h1 {
             color: #ff66b2;
+            text-shadow: 2px 2px 4px #000;
         }
         .header {
             margin-top: 20px;
             font-size: 24px;
             color: #ff66b2;
             text-align: center;
+            text-shadow: 2px 2px 4px #000;
         }
         .box-container {
-            width: 400px;
-            height: 400px;
+            width: 450px;
+            height: 450px;
             position: relative;
             display: flex;
             justify-content: center;
@@ -30,8 +37,8 @@
             flex-wrap: wrap;
         }
         .box {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             margin: 5px;
             background-color: #ff66b2;
             display: flex;
@@ -42,12 +49,13 @@
             font-weight: bold;
             position: relative;
             border-radius: 50%;
+            text-shadow: 2px 2px 4px #000;
         }
         .box::before {
             content: '👑';
-            font-size: 24px;
+            font-size: 28px;
             position: absolute;
-            top: -25px;
+            top: -30px;
         }
         .box.selected {
             background-color: #ff99cc;
@@ -56,6 +64,7 @@
             margin-top: 20px;
             font-size: 16px;
             color: #ff66b2;
+            text-shadow: 2px 2px 4px #000;
         }
     </style>
 </head>
@@ -63,32 +72,39 @@
     <h1>Luck of the Crowns</h1>
     <div class="header">Gamble With Ash - Brought to you by Crown Coins Casino</div>
     <div class="box-container">
-        <!-- Boxes positioned to form a heart shape -->
-        <div class="box" data-prize="1">1</div>
-        <div class="box" data-prize="5">5</div>
-        <div class="box" data-prize="10">10</div>
-        <div class="box" data-prize="15">15</div>
-        <div class="box" data-prize="20">20</div>
-        <div class="box" data-prize="25">25</div>
-        <div class="box" data-prize="30">30</div>
-        <div class="box" data-prize="35">35</div>
-        <div class="box" data-prize="40">40</div>
-        <div class="box" data-prize="45">45</div>
-        <div class="box" data-prize="50">50</div>
-        <div class="box" data-prize="55">55</div>
-        <div class="box" data-prize="60">60</div>
-        <div class="box" data-prize="65">65</div>
-        <div class="box" data-prize="70">70</div>
-        <div class="box" data-prize="75">75</div>
-        <div class="box" data-prize="80">80</div>
-        <div class="box" data-prize="85">85</div>
-        <div class="box" data-prize="90">90</div>
-        <div class="box" data-prize="100">100</div>
+        <div class="box" data-prize="0.01">1</div>
+        <div class="box" data-prize="0.05">2</div>
+        <div class="box" data-prize="0.10">3</div>
+        <div class="box" data-prize="0.15">4</div>
+        <div class="box" data-prize="0.20">5</div>
+        <div class="box" data-prize="0.25">6</div>
+        <div class="box" data-prize="0.30">7</div>
+        <div class="box" data-prize="0.35">8</div>
+        <div class="box" data-prize="0.40">9</div>
+        <div class="box" data-prize="0.45">10</div>
+        <div class="box" data-prize="0.50">11</div>
+        <div class="box" data-prize="0.55">12</div>
+        <div class="box" data-prize="0.60">13</div>
+        <div class="box" data-prize="0.65">14</div>
+        <div class="box" data-prize="0.70">15</div>
+        <div class="box" data-prize="0.75">16</div>
+        <div class="box" data-prize="0.80">17</div>
+        <div class="box" data-prize="0.85">18</div>
+        <div class="box" data-prize="0.90">19</div>
+        <div class="box" data-prize="1.00">20</div>
+        <div class="box" data-prize="1.50">21</div>
+        <div class="box" data-prize="2.00">22</div>
+        <div class="box" data-prize="2.50">23</div>
+        <div class="box" data-prize="3.00">24</div>
+        <div class="box" data-prize="3.50">25</div>
+        <div class="box" data-prize="4.00">26</div>
+        <div class="box" data-prize="4.50">27</div>
+        <div class="box" data-prize="5.00">28</div>
     </div>
     <div class="footer">Good luck and have fun!</div>
     <script>
         const boxes = document.querySelectorAll('.box');
-        boxes.forEach(box => {
+        boxes.forEach((box, index) => {
             box.addEventListener('click', () => {
                 if (!box.classList.contains('selected')) {
                     const prize = box.getAttribute('data-prize');
@@ -100,4 +116,3 @@
     </script>
 </body>
 </html>
-
