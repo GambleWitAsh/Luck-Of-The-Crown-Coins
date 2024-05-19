@@ -77,4 +77,61 @@
             position: absolute;
             top: -30px;
             left: -25px;
-  
+        }
+        .box.selected .crown,
+        .box.selected .crown:before {
+            border-bottom-color: #ff66b2; /* Change crown color when selected */
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #ff66b2;
+            text-shadow: 2px 2px 4px #000;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="https://github.com/GambleWitAsh/Luck-Of-The-Crown-Coins/raw/main/CCLogo.Stat.mp4" type="video/mp4">
+    </video>
+    <h1>Luck of the Crowns</h1>
+    <div class="header">Gamble With Ash - Brought to you by Crown Coins Casino</div>
+    <div class="box-container" id="box-container">
+        <!-- Boxes will be generated here by JavaScript -->
+    </div>
+    <div class="footer">Good luck and have fun!</div>
+    <script>
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const boxContainer = document.getElementById('box-container');
+            const prizes = [0.01, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90, 1.00];
+            const shuffledPrizes = shuffle(prizes);
+
+            for (let i = 0; i < shuffledPrizes.length; i++) {
+                const box = document.createElement('div');
+                box.classList.add('box');
+                box.dataset.prize = shuffledPrizes[i];
+                const crown = document.createElement('div');
+                crown.classList.add('crown');
+                box.appendChild(crown);
+                box.addEventListener('click', () => {
+                    if (!box.classList.contains('selected')) {
+                        box.innerHTML = `${box.dataset.prize} S.C`;
+                        box.classList.add('selected');
+                    }
+                });
+                boxContainer.appendChild(box);
+            }
+        });
+    </script>
+</body>
+</html>
+
