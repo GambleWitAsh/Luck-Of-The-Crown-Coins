@@ -59,26 +59,26 @@
     <div class="header">Gamble With Ash - Brought to you by Crown Coins Casino</div>
     <div class="box-container">
         <!-- Boxes positioned to form a heart shape -->
-        <div class="box" data-prize="1" style="top: 50px; left: 125px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
-        <div class="box" data-prize="5" style="top: 50px; left: 225px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
-        <div class="box" data-prize="10" style="top: 100px; left: 75px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
-        <div class="box" data-prize="15" style="top: 100px; left: 275px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
-        <div class="box" data-prize="20" style="top: 150px; left: 50px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
-        <div class="box" data-prize="25" style="top: 150px; left: 300px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
-        <div class="box" data-prize="30" style="top: 200px; left: 75px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
-        <div class="box" data-prize="35" style="top: 200px; left: 125px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
-        <div class="box" data-prize="40" style="top: 200px; left: 175px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
-        <div class="box" data-prize="45" style="top: 200px; left: 225px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
-        <div class="box" data-prize="50" style="top: 200px; left: 275px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
-        <div class="box" data-prize="55" style="top: 250px; left: 100px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
-        <div class="box" data-prize="60" style="top: 250px; left: 200px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
-        <div class="box" data-prize="65" style="top: 300px; left: 125px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
-        <div class="box" data-prize="70" style="top: 300px; left: 175px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
-        <div class="box" data-prize="75" style="top: 350px; left: 150px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
-        <div class="box" data-prize="80" style="top: 150px; left: 125px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
-        <div class="box" data-prize="85" style="top: 150px; left: 175px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
-        <div class="box" data-prize="90" style="top: 100px; left: 125px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
-        <div class="box" data-prize="100" style="top: 100px; left: 175px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
+        <div class="box" data-prize="1" style="top: 60px; left: 175px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
+        <div class="box" data-prize="5" style="top: 60px; left: 225px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
+        <div class="box" data-prize="10" style="top: 110px; left: 125px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
+        <div class="box" data-prize="15" style="top: 110px; left: 275px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
+        <div class="box" data-prize="20" style="top: 160px; left: 75px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
+        <div class="box" data-prize="25" style="top: 160px; left: 325px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
+        <div class="box" data-prize="30" style="top: 210px; left: 125px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
+        <div class="box" data-prize="35" style="top: 210px; left: 175px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
+        <div class="box" data-prize="40" style="top: 210px; left: 225px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
+        <div class="box" data-prize="45" style="top: 210px; left: 275px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
+        <div class="box" data-prize="50" style="top: 260px; left: 150px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
+        <div class="box" data-prize="55" style="top: 260px; left: 250px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
+        <div class="box" data-prize="60" style="top: 310px; left: 175px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
+        <div class="box" data-prize="65" style="top: 310px; left: 225px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
+        <div class="box" data-prize="70" style="top: 360px; left: 200px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
+        <div class="box" data-prize="75" style="top: 160px; left: 175px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
+        <div class="box" data-prize="80" style="top: 160px; left: 225px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
+        <div class="box" data-prize="85" style="top: 110px; left: 175px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
+        <div class="box" data-prize="90" style="top: 110px; left: 225px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
+        <div class="box" data-prize="100" style="top: 60px; left: 200px;"><img src="https://i.imgur.com/FcM8UZW.png" alt="Crown"></div>
     </div>
     <div class="footer">Good luck and have fun!</div>
     <script>
