@@ -13,9 +13,8 @@
             text-shadow: 2px 2px 4px #000;
             height: 100vh;
             margin: 0;
-            justify-content: flex-start; /* Align content to the top */
+            justify-content: center;
             overflow: hidden;
-            background-color: #000; /* Added background color for visibility */
         }
         #background-video {
             position: fixed;
@@ -27,10 +26,9 @@
             z-index: -1;
         }
         h1 {
-            font-size: 48px; /* Increased font size */
             color: #ff66b2;
             text-shadow: 2px 2px 4px #000;
-            margin-bottom: 20px; /* Increased margin */
+            margin-bottom: 10px;
             z-index: 1;
         }
         .header {
@@ -44,34 +42,32 @@
         .box-container {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            grid-gap: 50px; /* Increased gap for more spacing */
-            width: 700px; /* Increased width for more spacing */
+            grid-gap: 20px;
+            width: 500px;
             z-index: 1;
         }
         .box {
-            width: 100px; /* Increased box size */
-            height: 100px; /* Increased box size */
-            background-color: transparent; /* Removed background color */
+            width: 70px;
+            height: 70px;
+            background-color: #ff66b2;
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 50%;
             position: relative;
-            z-index: 1;
+            text-shadow: 2px 2px 4px #000;
         }
-        .crown {
-            width: 0;
-            height: 0;
-            border-left: 20px solid transparent;
-            border-right: 20px solid transparent;
-            border-bottom: 40px solid gold;
+        .box::before {
+            content: '👑';
+            font-size: 28px;
             position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
+            top: -30px;
         }
-        .box.selected .crown {
-            border-bottom-color: #ff66b2; /* Change crown color when selected */
+        .box.selected {
+            background-color: #ff99cc;
         }
         .footer {
             margin-top: 20px;
@@ -87,4 +83,40 @@
         <source src="https://github.com/GambleWitAsh/Luck-Of-The-Crown-Coins/raw/main/CCLogo.Stat.mp4" type="video/mp4">
     </video>
     <h1>Luck of the Crowns</h1>
-    <div class="header">Gam
+    <div class="header">Gamble With Ash - Brought to you by Crown Coins Casino</div>
+    <div class="box-container" id="box-container">
+        <!-- Boxes will be generated here by JavaScript -->
+    </div>
+    <div class="footer">Good luck and have fun!</div>
+    <script>
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const boxContainer = document.getElementById('box-container');
+            const prizes = [0.01, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90, 1.00];
+            const shuffledPrizes = shuffle(prizes);
+
+            for (let i = 0; i < shuffledPrizes.length; i++) {
+                const box = document.createElement('div');
+                box.classList.add('box');
+                box.dataset.prize = shuffledPrizes[i];
+                box.textContent = i + 1;
+                box.addEventListener('click', () => {
+                    if (!box.classList.contains('selected')) {
+                        box.innerHTML = `${box.dataset.prize} S.C`;
+                        box.classList.add('selected');
+                    }
+                });
+                boxContainer.appendChild(box);
+            }
+        });
+    </script>
+</body>
+</html>
+```
