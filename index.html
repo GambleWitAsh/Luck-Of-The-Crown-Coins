@@ -15,31 +15,31 @@
             background-position: center;
             color: #fff;
             text-shadow: 2px 2px 4px #000;
+            height: 100vh;
+            margin: 0;
+            justify-content: center;
         }
         h1 {
             color: #ff66b2;
             text-shadow: 2px 2px 4px #000;
+            margin-bottom: 10px;
         }
         .header {
-            margin-top: 20px;
             font-size: 24px;
             color: #ff66b2;
             text-align: center;
             text-shadow: 2px 2px 4px #000;
+            margin-bottom: 20px;
         }
         .box-container {
-            width: 450px;
-            height: 450px;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 10px;
+            width: 300px;
         }
         .box {
             width: 60px;
             height: 60px;
-            margin: 5px;
             background-color: #ff66b2;
             display: flex;
             justify-content: center;
@@ -47,9 +47,8 @@
             cursor: pointer;
             color: #fff;
             font-weight: bold;
-            position: relative;
             border-radius: 50%;
-            text-shadow: 2px 2px 4px #000;
+            position: relative;
         }
         .box::before {
             content: '👑';
@@ -92,19 +91,11 @@
         <div class="box" data-prize="0.85">18</div>
         <div class="box" data-prize="0.90">19</div>
         <div class="box" data-prize="1.00">20</div>
-        <div class="box" data-prize="1.50">21</div>
-        <div class="box" data-prize="2.00">22</div>
-        <div class="box" data-prize="2.50">23</div>
-        <div class="box" data-prize="3.00">24</div>
-        <div class="box" data-prize="3.50">25</div>
-        <div class="box" data-prize="4.00">26</div>
-        <div class="box" data-prize="4.50">27</div>
-        <div class="box" data-prize="5.00">28</div>
     </div>
     <div class="footer">Good luck and have fun!</div>
     <script>
         const boxes = document.querySelectorAll('.box');
-        boxes.forEach((box, index) => {
+        boxes.forEach((box) => {
             box.addEventListener('click', () => {
                 if (!box.classList.contains('selected')) {
                     const prize = box.getAttribute('data-prize');
@@ -116,3 +107,4 @@
     </script>
 </body>
 </html>
+
