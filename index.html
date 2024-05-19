@@ -58,15 +58,36 @@
             position: relative;
             z-index: 1;
         }
-        .box img {
-            width: 100%; /* Make sure the image fills the box */
-            height: 100%; /* Make sure the image fills the box */
+        .crown {
+            width: 70%;
+            height: 70%;
+            background-color: gold; /* Crown color */
+            border-radius: 50% 50% 0 0; /* Make top half round */
             position: absolute;
             top: 0;
-            left: 0;
+            left: 50%;
+            transform: translateX(-50%);
         }
-        .box.selected img {
-            filter: hue-rotate(200deg); /* Change color of the crown when selected */
+        .crown::before,
+        .crown::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            background-color: gold; /* Crown color */
+        }
+        .crown::before {
+            top: 0;
+            left: 0;
+            border-radius: 0 0 0 50%; /* Make top left corner rounded */
+        }
+        .crown::after {
+            top: 0;
+            right: 0;
+            border-radius: 0 0 50% 0; /* Make top right corner rounded */
+        }
+        .box.selected .crown {
+            background-color: #ff66b2; /* Change crown color when selected */
         }
         .footer {
             margin-top: 20px;
@@ -105,10 +126,9 @@
                 const box = document.createElement('div');
                 box.classList.add('box');
                 box.dataset.prize = shuffledPrizes[i];
-                const crownImg = document.createElement('img');
-                crownImg.src = 'Crown.png'; // Update with the correct path
-                crownImg.alt = 'Crown';
-                box.appendChild(crownImg);
+                const crown = document.createElement('div');
+                crown.classList.add('crown');
+                box.appendChild(crown);
                 box.addEventListener('click', () => {
                     if (!box.classList.contains('selected')) {
                         box.innerHTML = `${box.dataset.prize} S.C`;
