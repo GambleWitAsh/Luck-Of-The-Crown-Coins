@@ -42,32 +42,34 @@
         .box-container {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            grid-gap: 20px; /* Increased spacing */
-            width: 500px; /* Increased width for spacing */
+            grid-gap: 50px; /* Increased gap for more spacing */
+            width: 700px; /* Increased width for more spacing */
             z-index: 1;
         }
         .box {
-            width: 70px;
-            height: 70px;
-            background-color: #ff66b2;
+            width: 100px; /* Increased box size */
+            height: 100px; /* Increased box size */
+            background-color: transparent; /* Removed background color */
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
             color: #fff;
             font-weight: bold;
-            border-radius: 50%;
             position: relative;
             text-shadow: 2px 2px 4px #000;
+            border: none; /* Removed border */
+            outline: none; /* Removed outline */
         }
         .box::before {
             content: '👑';
-            font-size: 28px;
+            font-size: 48px; /* Increased crown size */
             position: absolute;
             top: -30px;
+            color: gold; /* Crown color */
         }
-        .box.selected {
-            background-color: #ff99cc;
+        .box.selected::before {
+            color: #ff66b2; /* Change crown color when selected */
         }
         .footer {
             margin-top: 20px;
@@ -109,7 +111,7 @@
                 box.textContent = i + 1;
                 box.addEventListener('click', () => {
                     if (!box.classList.contains('selected')) {
-                        box.innerHTML = box.dataset.prize + " S.C";
+                        box.innerHTML = `${box.dataset.prize} S.C`;
                         box.classList.add('selected');
                     }
                 });
